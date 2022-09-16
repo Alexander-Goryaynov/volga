@@ -1,0 +1,22 @@
+{
+  "name": "alex/volga",
+  "authors": [
+    {
+      "name": "alex",
+      "email": "gor.alex595@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Backend\\": "backend/",
+      "Loader\\": "loader/"
+    }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.4",
+    "league/csv": "^9.0",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-redis": "*"
+  }
+}
