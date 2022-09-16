@@ -49,4 +49,4 @@ php loader/main.php абсолютный-путь-к-сsv-файлу
 php -S localhost:8000
 ```
 
-обратитесь по адресу http://localhost/getProduct/<product_id>
+обратитесь по адресу http://localhost:8000/getProduct/{product_id}
