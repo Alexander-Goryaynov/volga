@@ -14,6 +14,10 @@ $redis->auth($_ENV['REDIS_PASSWORD']);
 $urlPathParts = explode('/', $_SERVER['PATH_INFO']);
 $productId = end($urlPathParts);
 $productDictionary = $redis->hGetAll($productId);
+if (empty($productDictionary)) {
+    http_response_code(404);
+    exit;
+}
 echo json_encode(
     ProductConverter::convertToJson($productId, $productDictionary),
     JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
