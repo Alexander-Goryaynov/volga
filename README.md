@@ -16,7 +16,7 @@ sudo nano /etc/redis/redis.conf
 ```
 - раскомментировать опцию `bind 127.0.0.1 ::1`
 - задать опцию `requirepass вашПароль`
-- задать опцию персистентности `save 1 1`
+- задать опцию персистентности `save 300 1`
 - можно задать опцию `maxmemory`
 ```bash
 sudo systemctl restart redis.service

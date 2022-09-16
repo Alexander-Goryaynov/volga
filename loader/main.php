@@ -26,6 +26,7 @@ foreach ($csvReader->getRecords() as $line) {
         $redis->hSet($id, $columnNames[$i], $line[$columnNames[$i]]);
     }
 }
+$redis->save();
 
 $workTime = (microtime(true) - $startTime) * 1000;
 
